@@ -8,6 +8,14 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>SSDT-ACOS-ACSE.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-ACOS-ACSE.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>SSDT-dGPU-Off.aml</string>
 				<key>Enabled</key>
 				<true/>
