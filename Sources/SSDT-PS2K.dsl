@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASL4cl8rV.aml, Sat Dec 30 19:38:25 2023
+ * Disassembly of iASLDOhYSU.aml, Sat Dec 30 19:45:11 2023
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000139 (313)
+ *     Length           0x000000C2 (194)
  *     Revision         0x02
- *     Checksum         0x01
+ *     Checksum         0x31
  *     OEM ID           "ACDT"
  *     OEM Table ID     "Ps2"
  *     OEM Revision     0x00000000 (0)
@@ -22,29 +22,8 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "Ps2", 0x00000000)
 {
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
 
-    Name (_SB.PCI0.LPCB.PS2K.RMCF, Package (0x08)
+    Name (_SB.PCI0.LPCB.PS2K.RMCF, Package (0x02)
     {
-        "Elantech TouchPad", 
-        Package (0x02)
-        {
-            "DisableDevice", 
-            ">y"
-        }, 
-
-        "Sentelic FSP", 
-        Package (0x02)
-        {
-            "DisableDevice", 
-            ">y"
-        }, 
-
-        "Synaptics TouchPad", 
-        Package (0x02)
-        {
-            "DisableDevice", 
-            ">y"
-        }, 
-
         "Keyboard", 
         Package (0x04)
         {
