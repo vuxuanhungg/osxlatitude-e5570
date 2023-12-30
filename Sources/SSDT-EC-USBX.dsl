@@ -5,18 +5,18 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLfvMVUs.aml, Sat Dec 30 19:12:37 2023
+ * Disassembly of iASLrgn0pZ.aml, Sat Dec 30 19:21:11 2023
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000132 (306)
+ *     Length           0x00000100 (256)
  *     Revision         0x02
- *     Checksum         0x00
+ *     Checksum         0xAC
  *     OEM ID           "ACDT"
  *     OEM Table ID     "SsdtEC"
  *     OEM Revision     0x00001000 (4096)
  *     Compiler ID      "INTL"
- *     Compiler Version 0x20180105 (538444037)
+ *     Compiler Version 0x20200925 (538970405)
  */
 DefinitionBlock ("", "SSDT", 2, "ACDT", "SsdtEC", 0x00001000)
 {
@@ -37,16 +37,12 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "SsdtEC", 0x00001000)
                     })
                 }
 
-                Return (Package (0x08)
+                Return (Package (0x04)
                 {
-                    "kUSBSleepPowerSupply", 
-                    0x13EC, 
                     "kUSBSleepPortCurrentLimit", 
-                    0x0834, 
-                    "kUSBWakePowerSupply", 
-                    0x13EC, 
+                    0x0BB8, 
                     "kUSBWakePortCurrentLimit", 
-                    0x0834
+                    0x0BB8
                 })
             }
 
