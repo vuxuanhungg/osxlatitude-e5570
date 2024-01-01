@@ -1,6 +1,6 @@
 # Dell Latitude E5570 Hackintosh OpenCore
 
-Install macOS on Dell Latitude E5570.
+Install macOS Monterey on Dell Latitude E5570.
 
 - [Overview](#overview)
 - [Hardware specifications](#hardware-specifications)
@@ -57,6 +57,17 @@ Anything not listed here means they works normally.
 - Depends on whether you want to modify hidden settings in your BIOS, follow the corresponding guide:
   - [With modded BIOS](#with-modded-bios)
   - [Without modded BIOS](#without-modded-bios)
+- [BIOS settings](#bios-settings)
+
+**Note**:
+
+This EFI is compatible with macOS Monterey. If you want to boot older versions, you need to change the following:
+
+- Change `AirportItlwm` and `IntelBluetoothFirmware` to the version you want to boot
+- `Security/SecureBootModel`: `j680`
+  > Setting this value allows you to boot macOS 10.13.6 or newer. You can also set this to `Disabled`. In that case, you need to use `itlwm` and `HeliPort` instead of `AirportItlwm`.
+- `APFS Versions`: See [here](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/skylake.html#apfs).
+- For macOS 10.13.6, you also need to enable `NormalizeHeaders` under `ACPI/Quirks`, or you will get a [kernel panic](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/kernel-issues.html#kernel-panic-appleacpiplatform-in-10-13).
 
 ### BIOS settings
 
