@@ -106,11 +106,15 @@ Or copy the following into `Add/PciRoot(0x0)/Pci(0x2,0x0)` (using ProperTree):
 - If you encounter [sleep issues](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html#preparations), run the following in `Terminal`:
 
 ```bash
+# From Dortania guide
 sudo pmset autopoweroff 0
 sudo pmset powernap 0
 sudo pmset standby 0
 sudo pmset proximitywake 0
 sudo pmset tcpkeepalive 0
+
+# Extra: Disable wake for network access
+sudo pmset womp 0
 ```
 
 - Enable TRIM support (optional): `sudo trimforce enable`
@@ -143,6 +147,8 @@ A rough interpretation of each command is as follow:
 - "cd" into the BIOS folder
 - Run `bios-config.nsh` and enjoy!
 
+For a detailed guide, see [here](https://www.reddit.com/r/hackintosh/comments/sy2170/opencore_uefi_shell_for_hackintosh/).
+
 ## Recommended apps for a better hackintosh experience
 
 - LinearMouse
@@ -157,4 +163,5 @@ A rough interpretation of each command is as follow:
 - [bios-extraction-guide](bios-extraction-guide)
 - [dell-inspiron-5370-hackintosh](dell-inspiron-5370-hackintosh)
 - [XiaoMi-Pro-Hackintosh](https://github.com/daliansky/XiaoMi-Pro-Hackintosh)
+- [Power Management in detail: using pmset](https://eclecticlight.co/2017/01/20/power-management-in-detail-using-pmset/)
 - and various sources on the Internet =))
