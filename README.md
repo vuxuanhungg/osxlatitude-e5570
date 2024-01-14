@@ -46,7 +46,7 @@ Before you start, make sure you have read [the bible](https://dortania.github.io
 - **HDMI** might not work the first time you plug in. In that case, put the laptop to sleep, turn it back on, and re-plug in.
 - **SD Card Reader** is ejected after wake up. See [here](https://github.com/0xFireWolf/RealtekCardReader/blob/main/Docs/KnownIssues.md#card-ejected-after-waked-up).
 - Sometimes, the trackpad cursor arbitrarily jumps to a corner of the screen. This is a [driver issue](https://github.com/acidanthera/VoodooPS2), so I cannot do anything about it.
-- For some Bluetooth devices, it might take a little longer to reconnect after sleep. Sometimes, Bluetooth devices will not reconnect until you unlock the lock screen.
+- For some Bluetooth devices, it might take a little longer to reconnect after sleep. Sometimes, Bluetooth devices will not reconnect until you unlock the lock screen. Sometimes, bluetooth is not available after sleep, which requires a restart.
 
 Anything not listed here means they works normally.
 
