@@ -160,8 +160,8 @@ For a detailed guide, see [here](https://www.reddit.com/r/hackintosh/comments/sy
 
 - [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 - [OC Little Translated](https://github.com/5T33Z0/OC-Little-Translated)
-- [bios-extraction-guide](bios-extraction-guide)
-- [dell-inspiron-5370-hackintosh](dell-inspiron-5370-hackintosh)
+- [bios-extraction-guide](https://github.com/dreamwhite/bios-extraction-guide)
+- [dell-inspiron-5370-hackintosh](https://github.com/dreamwhite/dell-inspiron-5370-hackintosh)
 - [XiaoMi-Pro-Hackintosh](https://github.com/daliansky/XiaoMi-Pro-Hackintosh)
 - [Power Management in detail: using pmset](https://eclecticlight.co/2017/01/20/power-management-in-detail-using-pmset/)
 - and various sources on the Internet =))
