@@ -17,3 +17,6 @@ setup_var.efi 0xD83 0x0 -n Setup
 
 echo "Enable XHCI Hand-off"
 setup_var.efi 0x1B 0x1 -n UsbSupport
+
+echo "Disable Overclocking Lock"
+setup_var.efi 0x183 0x0 -n Setup
