@@ -52,6 +52,9 @@ Anything not listed here means they works normally.
 
 ## How to install
 
+- Create the installer USB:
+  - If you want to make an online installer, follow [the Dortania guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html).
+  - If you prefer to have an offline installer instead, use [`corpnewt`'s `UnPlugged` script](https://github.com/corpnewt/UnPlugged).
 - Download the `EFI` folder
 - [Generate your own SMBIOS](https://github.com/corpnewt/GenSMBIOS)
 - Depends on whether you want to modify hidden settings in your BIOS, follow the corresponding guide:
@@ -63,15 +66,39 @@ Anything not listed here means they works normally.
 
 This EFI is compatible with macOS Monterey. If you want to boot older versions, you need to change the following:
 
-- Change `AirportItlwm` and `IntelBluetoothFirmware` to the version you want to boot
-- `Security/SecureBootModel`: `j680`
-  > Setting this value allows you to boot macOS 10.13.6 or newer. You can also set this to `Disabled`. In that case, you need to use `itlwm` and `HeliPort` instead of `AirportItlwm`.
+- Change `IntelBluetoothFirmware` to the version you want to boot
 - `APFS Versions`: See [here](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/skylake.html#apfs).
 - For macOS 10.13.6, you also need to enable `NormalizeHeaders` under `ACPI/Quirks`, or you will get a [kernel panic](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/kernel-issues.html#kernel-panic-appleacpiplatform-in-10-13).
 
 ### BIOS settings
 
-See [here](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/skylake.html#intel-bios-settings).
+- General -> Advanced Boot Option -> Enable Legacy Option ROMs: `false`
+- System Configuration:
+  - Parallel Port: `disabled`
+  - Serial Port: `disabled`
+  - SATA Operation: `AHCI`
+  - USB Configuration:
+    - Enable USB Boot Support: `true`
+    - Enable External USB Port: `true`
+- Security -> TPM 1.2 Security -> TPM On: `false`
+- Secure Boot -> Secure Boot Enable: `disabled`
+- Intel Software Guard Extensions -> Intel SGX Enable: `disabled`
+- Performance:
+  - Multi Core Support: `all`
+  - Intel SpeedStep -> Enable Intel SpeedStep: `true`
+  - C-States Control -> C-States: `true`
+  - Intel TurboBoost -> Enable Intel TurboBoost: `true`
+  - HyperThread control: `enabled`
+  - Fastboot: `minimal`
+- Virtualization Support:
+  - Virtualization -> Enable Intel Virtualization Technology: `true`
+  - VT for Direct I/O -> Enable VT for Direct I/O: `false` (can be `true` if you update `DisableIOMapper` inside `config.plist` to be `true`)
+
+> Some settings are hidden and can only be configured through the BIOS script attached:
+- CFG Lock: `disabled`
+- DVMT Pre-Allocated: `64MB`
+- EHCI/XHCI Hand-off: `enabled`
+
 
 ### With modded BIOS
 
@@ -151,7 +178,11 @@ For a detailed guide, see [here](https://www.reddit.com/r/hackintosh/comments/sy
 
 ## Recommended apps for a better hackintosh experience
 
-- LinearMouse
+- LinearMouse: 
+Below are settings I use for my Logitech B175 wireless mouse.
+  - Reverse scrolling: `enabled`
+  - Pointer acceleration: `0.5`
+  - Pointer speed: `0.25`
 - Rectangle
 - AltTab
 - TinkerTool
