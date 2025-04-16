@@ -128,6 +128,7 @@ Or copy the following into `Add/PciRoot(0x0)/Pci(0x2,0x0)` (using ProperTree):
 
 ## Post-install
 
+- Install `HeliPort` and add it to Login Items so that it starts automatically on boot (I prefer `itlwm` to `Airportlwm`).
 - [Boot without USB](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb)
 - Disable boot picker menu to boot straight into macOS: In `config.plist`, `Misc/Boot` -> `ShowPicker`: `False`
 - If you encounter [sleep issues](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html#preparations), run the following in `Terminal`:
